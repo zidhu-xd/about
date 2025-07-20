@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Under Construction - Zidhuxd</title>
+    <!-- Tailwind CSS CDN for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Pixelify Sans for a pixelated look -->
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to enhance the pixelated and vintage feel */
+        body {
+            font-family: 'Pixelify Sans', cursive; /* Apply pixel font */
+            background-color: #f7f3e9; /* Light vintage cream background */
+            color: #4a4a4a; /* Dark gray text for contrast */
+            display: flex;
+            flex-direction: column; /* Arrange content vertically */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full viewport height */
+            margin: 0;
+            padding: 20px; /* Add some padding around the content */
+            box-sizing: border-box; /* Include padding in element's total width and height */
+            text-align: center; /* Center text within the body */
+            gap: 24px; /* Space between elements directly in body */
+        }
+
+        h1 {
+            font-size: 2.5rem; /* Large heading */
+            color: #6d4c41; /* Darker vintage brown for heading */
+            line-height: 1.1;
+            margin-bottom: 0; /* Remove default margin */
+            text-shadow: 2px 2px #f0e6d2; /* Subtle pixel-like text shadow */
+        }
+
+        p {
+            font-size: 1.1rem; /* Readable paragraph text */
+            line-height: 1.6;
+            color: #5d4037; /* Slightly lighter brown for paragraphs */
+            max-width: 500px; /* Limit paragraph width for readability */
+        }
+
+        .construction-gif {
+            width: 100%; /* Make GIF responsive */
+            max-width: 250px; /* Max width for the GIF */
+            height: auto;
+            border: 2px solid #a1887f; /* Border around GIF */
+            border-radius: 8px; /* Rounded corners for GIF */
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.08); /* Shadow for GIF */
+            image-rendering: pixelated; /* Ensure pixelated rendering for the GIF */
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: #8d6e63; /* Vintage brown button */
+            color: #ffffff; /* White text */
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none; /* No underline */
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.2s ease-in-out; /* Smooth transition for hover */
+            border: 2px solid #5d4037; /* Darker border for depth */
+            box-shadow: 4px 4px 0px #5d4037; /* Button shadow */
+        }
+
+        .contact-button:hover {
+            background-color: #795548; /* Darker brown on hover */
+            transform: translateY(2px) translateX(2px); /* Slight press effect */
+            box-shadow: 2px 2px 0px #5d4037; /* Adjusted shadow on hover */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .construction-gif {
+                max-width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+            .contact-button {
+                padding: 12px 24px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- GIF for construction -->
+    <img src="heheload.gif"
+         alt="Pixel art construction worker"
+         class="construction-gif">
+
+    <!-- Main heading indicating unfinished status -->
+    <h1>Website Under Construction!</h1>
+
+    <!-- Subtitle/description -->
+    <p>
+        Our web building construction is at work, crafting something special for you.
+        This page is a sneak peek, pre-published as we lay the final pixel bricks.
+        Thanks for your patience!
+    </p>
+
+    <!-- Contact button -->
+    <a href="https://ig.me/zidhuxd" target="_blank" class="contact-button">
+        Contact Developer
+    </a>
+</body>
+</html>
