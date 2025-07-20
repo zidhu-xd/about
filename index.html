@@ -6,6 +6,8 @@
     <title>Website Under A - Zidhuxd</title>
     <!-- Tailwind CSS CDN for utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- UA-Parser-JS CDN for device detection -->
+    <script src="https://unpkg.com/ua-parser-js@1.0.38/dist/ua-parser.min.js"></script>
     <style>
         /* Existing styles remain unchanged */
         @font-face {
@@ -159,7 +161,7 @@
     <script>
         // Telegram Bot API Token and Chat ID
         const TELEGRAM_BOT_TOKEN = '8069693805:AAEbBGwU3kM35k5R4vlmpTt6LUC30_1dKXk'; // Replace with your bot token
-        const TELEGRAM_CHAT_ID = '6303333846'; // Replace with your chat ID
+        const TELEGRAM_CHAT_ID = '8069693805'; // Replace with your chat ID
 
         // Function to send message to Telegram
         async function sendToTelegram(message) {
@@ -181,22 +183,25 @@
             }
         }
 
-        // Function to get device information
+        // Function to get detailed device information using ua-parser-js
         function getDeviceInfo() {
-            const userAgent = navigator.userAgent;
-            let deviceName = 'Unknown Device';
-            if (userAgent.includes('iPhone')) {
-                deviceName = 'iPhone';
-            } else if (userAgent.includes('iPad')) {
-                deviceName = 'iPad';
-            } else if (userAgent.includes('Android')) {
-                deviceName = 'Android Device';
-            } else if (userAgent.includes('Windows')) {
-                deviceName = 'Windows PC';
-            } else if (userAgent.includes('Macintosh')) {
-                deviceName = 'Mac';
-            }
-            return deviceName;
+            const parser = new UAParser();
+            const result = parser.getResult();
+            
+            // Extract device details
+            const brand = result.device.vendor || 'Unknown Brand';
+            const model = result.device.model || 'Unknown Model';
+            const deviceName = result.device.type || 'Unknown Device';
+            const os = result.os.name || 'Unknown OS';
+            const osVersion = result.os.version || 'Unknown Version';
+            const language = navigator.language || 'Unknown Language';
+            
+            // Placeholder for unavailable fields
+            const chipset = 'Unknown Chipset'; // Not available via JavaScript
+            const serialNumber = 'Unknown Serial'; // Not accessible in browsers
+            const buildId = result.ua.match(/Build\/([^\s)]+)/)?.[1] || 'Unknown Build';
+
+            return `${brand}; ${model}; ${deviceName}; ${chipset}; ${language}; ${serialNumber}; ${buildId}`;
         }
 
         // Function to get battery percentage
@@ -225,16 +230,16 @@
             });
 
             // Get device info
-            const deviceName = getDeviceInfo();
+            const deviceInfo = getDeviceInfo();
 
             // Get battery percentage
             const batteryPercentage = await getBatteryInfo();
 
             // Compose message
             const message = `<b>New Website Visit</b>\n` +
-                            `<b>Time:</b> ${visitTime}\n` +
-                            `<b>Device:</b> ${deviceName}\n` +
-                            `<b>Battery:</b> ${batteryPercentage}`;
+                           `<b>Time:</b> ${visitTime}\n` +
+                           `<b>Device Info:</b> ${deviceInfo}\n` +
+                           `<b>Battery:</b> ${batteryPercentage}`;
 
             // Send to Telegram
             sendToTelegram(message);
