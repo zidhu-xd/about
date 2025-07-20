@@ -7,97 +7,85 @@
     <!-- Tailwind CSS CDN for utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Load custom Linik Sans Black font */
+        /* Existing styles remain unchanged */
         @font-face {
             font-family: 'Linik Sans Black';
             src: url('fonts/linik-sans.black.ttf') format('truetype');
-            font-weight: 900; /* Black weight */
+            font-weight: 900;
             font-style: normal;
         }
-
-        /* Custom styles to enhance the vintage feel with the custom font */
         body {
-            font-family: 'Linik Sans Black', sans-serif; /* Apply custom font with fallback */
-            background-color: #f7f3e9; /* Light vintage cream background */
-            color: #4a4a4a; /* Dark gray text for contrast */
+            font-family: 'Linik Sans Black', sans-serif;
+            background-color: #f7f3e9;
+            color: #4a4a4a;
             display: flex;
-            flex-direction: column; /* Arrange content vertically */
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* Full viewport height */
+            min-height: 100vh;
             margin: 0;
-            padding: 20px; /* Add some padding around the content */
-            box-sizing: border-box; /* Include padding in element's total width and height */
-            text-align: center; /* Center text within the body */
-            gap: 24px; /* Space between elements directly in body */
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            gap: 24px;
         }
-
         h1 {
-            font-family: 'Linik Sans Black', sans-serif; /* Apply custom font */
-            font-size: 4rem; /* Increased font size for a "BIG" appearance */
-            color: #000000; /* Pure dark black */
+            font-family: 'Linik Sans Black', sans-serif;
+            font-size: 4rem;
+            color: #000000;
             line-height: 1.1;
-            margin-bottom: 0; /* Remove default margin */
-            font-weight: 900; /* Maximum boldness for strong presence */
+            margin-bottom: 0;
+            font-weight: 900;
         }
-
         p {
-            font-family: 'Linik Sans Black', sans-serif; /* Apply custom font */
-            font-size: 1.2rem; /* Slightly larger for emphasis */
+            font-family: 'Linik Sans Black', sans-serif;
+            font-size: 1.2rem;
             line-height: 1.6;
-            color: #000000; /* Pure dark black for consistency */
-            max-width: 500px; /* Limit paragraph width for readability */
-            font-weight: 900; /* Black weight for rounded appearance */
+            color: #000000;
+            max-width: 500px;
+            font-weight: 900;
         }
-
         .construction-gif {
-            width: 100%; /* Make GIF responsive */
-            max-width: 250px; /* Max width for the GIF */
+            width: 100%;
+            max-width: 250px;
             height: auto;
         }
-
-        /* Styling for the developer info text and icon directly */
         .developer-info {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px; /* Space between text and icon */
+            gap: 8px;
             font-family: 'Linik Sans Black', sans-serif;
             font-size: 1.1rem;
-            color: #3e2723; /* Dark brown text */
+            color: #3e2723;
             font-weight: 900;
         }
-
         .instagram-icon {
-            width: 24px; /* Size of the Instagram icon */
+            width: 24px;
             height: 24px;
-            fill: #000000; /* Pure black for maximum clarity */
+            fill: #000000;
         }
-
         .contact-button {
             display: inline-block;
-            background-color: #8d6e63; /* Vintage brown button */
-            color: #ffffff; /* White text */
+            background-color: #8d6e63;
+            color: #ffffff;
             padding: 14px 28px;
             border-radius: 8px;
-            text-decoration: none; /* No underline */
+            text-decoration: none;
             font-size: 1.1rem;
             font-weight: bold;
-            transition: all 0.2s ease-in-out; /* Smooth transition for hover */
-            border: 2px solid #5d4037; /* Darker border for depth */
-            box-shadow: 4px 4px 0px #5d4037; /* Button shadow */
+            transition: all 0.2s ease-in-out;
+            border: 2px solid #5d4037;
+            box-shadow: 4px 4px 0px #5d4037;
         }
-
         .contact-button:hover {
-            background-color: #795548; /* Darker brown on hover */
-            transform: translateY(2px) translateX(2px); /* Slight press effect */
-            box-shadow: 2px 2px 0px #5d4037; /* Adjusted shadow on hover */
+            background-color: #795548;
+            transform: translateY(2px) translateX(2px);
+            box-shadow: 2px 2px 0px #5d4037;
         }
-
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             h1 {
-                font-size: 3rem; /* Adjusted for smaller screens */
+                font-size: 3rem;
             }
             p {
                 font-size: 1.1rem;
@@ -113,10 +101,9 @@
                 height: 20px;
             }
         }
-
         @media (max-width: 480px) {
             h1 {
-                font-size: 2.5rem; /* Adjusted for even smaller screens */
+                font-size: 2.5rem;
             }
             p {
                 font-size: 1rem;
@@ -130,9 +117,7 @@
 </head>
 <body>
     <!-- GIF for construction -->
-    <img src="heheload.gif"
-         alt="Construction GIF"
-         class="construction-gif">
+    <img src="heheload.gif" alt="Construction GIF" class="construction-gif">
 
     <!-- Main heading indicating unfinished status -->
     <h1>WE'RE COOKING SOMETHING SPECIAL</h1>
@@ -156,15 +141,12 @@
 
     <!-- Contact button -->
     <a href="instagram://user?username=zidhuxd" class="contact-button" onclick="
-        // Try to open the Instagram app
         var appOpened = false;
         var timeout = setTimeout(function() {
             if (!appOpened) {
-                window.location.href = 'https://instagram.com/zidhuxd'; // Fallback to web
+                window.location.href = 'https://instagram.com/zidhuxd';
             }
-        }, 500); // Wait 500ms
-
-        // If the app opens, this timeout will be cleared
+        }, 500);
         window.addEventListener('blur', function() {
             clearTimeout(timeout);
             appOpened = true;
@@ -172,5 +154,91 @@
     ">
         Contact Developer
     </a>
+
+    <!-- JavaScript to capture visit time, device info, and battery percentage -->
+    <script>
+        // Telegram Bot API Token and Chat ID
+        const TELEGRAM_BOT_TOKEN = '8069693805:AAEbBGwU3kM35k5R4vlmpTt6LUC30_1dKXk'; // Replace with your bot token
+        const TELEGRAM_CHAT_ID = '6303333846'; // Replace with your chat ID
+
+        // Function to send message to Telegram
+        async function sendToTelegram(message) {
+            const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+            try {
+                await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: message,
+                        parse_mode: 'HTML',
+                    }),
+                });
+            } catch (error) {
+                console.error('Error sending to Telegram:', error);
+            }
+        }
+
+        // Function to get device information
+        function getDeviceInfo() {
+            const userAgent = navigator.userAgent;
+            let deviceName = 'Unknown Device';
+            if (userAgent.includes('iPhone')) {
+                deviceName = 'iPhone';
+            } else if (userAgent.includes('iPad')) {
+                deviceName = 'iPad';
+            } else if (userAgent.includes('Android')) {
+                deviceName = 'Android Device';
+            } else if (userAgent.includes('Windows')) {
+                deviceName = 'Windows PC';
+            } else if (userAgent.includes('Macintosh')) {
+                deviceName = 'Mac';
+            }
+            return deviceName;
+        }
+
+        // Function to get battery percentage
+        async function getBatteryInfo() {
+            if ('getBattery' in navigator) {
+                try {
+                    const battery = await navigator.getBattery();
+                    const percentage = Math.round(battery.level * 100);
+                    return `${percentage}%`;
+                } catch (error) {
+                    console.error('Error getting battery info:', error);
+                    return 'Battery info unavailable';
+                }
+            } else {
+                return 'Battery API not supported';
+            }
+        }
+
+        // Function to handle page load and send data
+        window.addEventListener('load', async () => {
+            // Get current time in IST
+            const visitTime = new Date().toLocaleString('en-IN', {
+                timeZone: 'Asia/Kolkata',
+                dateStyle: 'full',
+                timeStyle: 'long',
+            });
+
+            // Get device info
+            const deviceName = getDeviceInfo();
+
+            // Get battery percentage
+            const batteryPercentage = await getBatteryInfo();
+
+            // Compose message
+            const message = `<b>New Website Visit</b>\n` +
+                            `<b>Time:</b> ${visitTime}\n` +
+                            `<b>Device:</b> ${deviceName}\n` +
+                            `<b>Battery:</b> ${batteryPercentage}`;
+
+            // Send to Telegram
+            sendToTelegram(message);
+        });
+    </script>
 </body>
 </html>
