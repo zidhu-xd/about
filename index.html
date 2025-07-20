@@ -56,6 +56,24 @@
             height: auto;
         }
 
+        /* Styling for the developer info text and icon directly */
+        .developer-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px; /* Space between text and icon */
+            font-family: 'Linik Sans Black', sans-serif;
+            font-size: 1.1rem;
+            color: #3e2723; /* Dark brown text */
+            font-weight: 900;
+        }
+
+        .instagram-icon {
+            width: 24px; /* Size of the Instagram icon */
+            height: 24px;
+            fill: #000000; /* Pure black for maximum clarity */
+        }
+
         .contact-button {
             display: inline-block;
             background-color: #8d6e63; /* Vintage brown button */
@@ -86,6 +104,13 @@
             }
             .construction-gif {
                 max-width: 200px;
+            }
+            .developer-info {
+                font-size: 1rem;
+            }
+            .instagram-icon {
+                width: 20px;
+                height: 20px;
             }
         }
 
@@ -118,6 +143,16 @@
         This page is a sneak peek, pre-published as we lay the final pixel bricks.
         Thanks for your patience!
     </p>
+
+    <!-- Developer Info directly in body -->
+    <div class="developer-info">
+        <span>DEVELOPER -</span>
+        <!-- Inline SVG for Instagram Logo -->
+        <svg class="instagram-icon" viewBox="0 0 24 24">
+            <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm-.2 2A2.82 2.82 0 0 0 5 7.8v8.4a2.82 2.82 0 0 0 2.8 2.8h8.4a2.82 2.82 0 0 0 2.8-2.8V7.8a2.82 2.82 0 0 0-2.8-2.8H7.6zm9.6 9.4c0 .9-.7 1.6-1.6 1.6H9.4c-.9 0-1.6-.7-1.6-1.6V9.4c0-.9.7-1.6 1.6-1.6h5.8c.9 0 1.6.7 1.6 1.6v5.8zM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm5.4-5.4a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/>
+        </svg>
+        <span>ZIDHUXD</span>
+    </div>
 
     <!-- Contact button -->
     <a href="https://instagram.com/zidhuxd" target="_blank" class="contact-button">
