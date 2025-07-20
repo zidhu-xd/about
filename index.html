@@ -151,11 +151,25 @@
         <svg class="instagram-icon" viewBox="0 0 24 24">
             <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm-.2 2A2.82 2.82 0 0 0 5 7.8v8.4a2.82 2.82 0 0 0 2.8 2.8h8.4a2.82 2.82 0 0 0 2.8-2.8V7.8a2.82 2.82 0 0 0-2.8-2.8H7.6zm9.6 9.4c0 .9-.7 1.6-1.6 1.6H9.4c-.9 0-1.6-.7-1.6-1.6V9.4c0-.9.7-1.6 1.6-1.6h5.8c.9 0 1.6.7 1.6 1.6v5.8zM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm5.4-5.4a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/>
         </svg>
-        <span>ZIDHUXD</span>
+        <span>@ZIDHUXD</span>
     </div>
 
     <!-- Contact button -->
-    <a href="https://instagram.com/zidhuxd" target="_blank" class="contact-button">
+    <a href="instagram://user?username=zidhuxd" class="contact-button" onclick="
+        // Try to open the Instagram app
+        var appOpened = false;
+        var timeout = setTimeout(function() {
+            if (!appOpened) {
+                window.location.href = 'https://instagram.com/zidhuxd'; // Fallback to web
+            }
+        }, 500); // Wait 500ms
+
+        // If the app opens, this timeout will be cleared
+        window.addEventListener('blur', function() {
+            clearTimeout(timeout);
+            appOpened = true;
+        }, { once: true });
+    ">
         Contact Developer
     </a>
 </body>
