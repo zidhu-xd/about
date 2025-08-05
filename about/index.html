@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Website Under A - Zidhuxd</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @font-face {
+      font-family: 'Linik Sans Black';
+      src: url('fonts/linik-sans.black.ttf') format('truetype');
+      font-weight: 1000
+        00;
+      font-style: normal;
+    }
+
+    body {
+      font-family: 'Linik Sans Black', sans-serif;
+      background-color: #f7f3e9;
+      color: #4a4a4a;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      gap: 24px;
+    }
+
+    h1 {
+      font-size: 30rem;
+      color: #000;
+      font-weight: 1000;
+      line-height: 3;
+      letter-spacing: 2px;
+      text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.0);
+    }
+
+    p {
+      font-size: 1.7rem;
+      max-width: 500px;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .construction-gif {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+    }
+
+    .developer-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 1.1rem;
+      color: #3e2723;
+      font-weight: 900;
+    }
+
+    .instagram-icon {
+      width: 24px;
+      height: 24px;
+      fill: #000;
+    }
+
+    .instagram-link {
+      text-decoration: none;
+      color: #3e2723;
+      cursor: pointer;
+    }
+
+    .contact-button {
+      background-color: #8d6e63;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: 2px solid #5d4037;
+      box-shadow: 4px 4px 0 #5d4037;
+      transition: 0.2s;
+    }
+
+    .contact-button:hover {
+      background-color: #795548;
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 #5d4037;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 7rem;
+      }
+      p {
+        font-size: 1.3rem;
+      }
+      .construction-gif {
+        max-width: 200px;
+      }
+      .developer-info {
+        font-size: 1rem;
+      }
+      .instagram-icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 4rem;
+        letter-spacing: -1px;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+      .contact-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="heheload.gif" alt="Construction GIF" class="construction-gif" />
+  <h1 class="text-3xl md:text-3xl lg:text-3xl font-extrabold text-black tracking-wide">Construction At Work ⚒️</h1>
+  <p>
+    I'm still cooking this site.<br>
+    This page is pre-published for testing.<br>
+    Thank you for your valuable time!
+  </p>
+
+  <div class="developer-info">
+    <span>DEV -</span>
+    <svg class="instagram-icon" viewBox="0 0 24 24">
+      <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm-.2 2A2.82 2.82 0 0 0 5 7.8v8.4a2.82 2.82 0 0 0 2.8 2.8h8.4a2.82 2.82 0 0 0 2.8-2.8V7.8a2.82 2.82 0 0 0-2.8-2.8H7.6zm9.6 9.4c0 .9-.7 1.6-1.6 1.6H9.4c-.9 0-1.6-.7-1.6-1.6V9.4c0-.9.7-1.6 1.6-1.6h5.8c.9 0 1.6.7 1.6 1.6v5.8zM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm5.4-5.4a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/>
+    </svg>
+    <a href="instagram://user?username=zidhuxd" class="instagram-link" onclick="
+      var appOpened = false;
+      var timeout = setTimeout(function() {
+          if (!appOpened) {
+              window.location.href = 'https://instagram.com/zidhuxd';
+          }
+      }, 500);
+      window.addEventListener('blur', function() {
+          clearTimeout(timeout);
+          appOpened = true;
+      }, { once: true });
+    ">ZIDHUXD</a>
+  </div>
+
+  <a href="instagram://user?username=zidhuxd" class="contact-button" onclick="
+    var appOpened = false;
+    var timeout = setTimeout(function() {
+        if (!appOpened) {
+            window.location.href = 'https://instagram.com/zidhuxd';
+        }
+    }, 500);
+    window.addEventListener('blur', function() {
+        clearTimeout(timeout);
+        appOpened = true;
+    }, { once: true });
+  ">
+    Contact Developer
+  </a>
+
+  <!-- ✅ TELEGRAM LOGGER -->
+  <script>
+    function getDeviceModel() {
+      const ua = navigator.userAgent;
+      const match = ua.match(/\((.*?)\)/);
+      if (!match) return "Unknown";
+      const parts = match[1].split(";");
+      for (let part of parts) {
+        part = part.trim();
+        if (/^[A-Z]{2,}-[A-Z0-9]+$/i.test(part)) return part;
+      }
+      return "Unknown";
+    }
+
+    function sendVisitorInfo(batteryLevel) {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString();
+      const dateString = now.toLocaleDateString();
+      const userAgent = navigator.userAgent;
+      const screenInfo = `${window.screen.width}x${window.screen.height}`;
+      const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const deviceModel = getDeviceModel();
+
+      const message = `
+📲 New Visitor to zidhuxd.me :
+🕒 ${dateString} ${timeString}
+🔋 Battery: ${batteryLevel}
+📱 Model: ${deviceModel}
+🧭 Timezone: ${timezone}
+🖥️ Screen: ${screenInfo}
+🌐 Browser: ${userAgent}
+      `.trim();
+
+      const chat_id = "6303333846";
+      const token = "8069693805:AAEbBGwU3kM35k5R4vlmpTt6LUC30_1dKXk";
+      const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+      fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id, text: message })
+      });
+    }
+
+    // Battery info
+    navigator.getBattery().then(battery => {
+      const batteryLevel = Math.round(battery.level * 100) + "%";
+      sendVisitorInfo(batteryLevel);
+    }).catch(() => {
+      sendVisitorInfo("Battery info not available");
+    });
+  </script>
+</body>
+</html>
