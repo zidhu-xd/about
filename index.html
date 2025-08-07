@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta description="Learn more about me."/>
-  <meta og:image="hellyah.png"/>
+  <meta name="description" content="Learn more about me.">
+  <meta property="og:image" content="hellyah.png"/>
   
   <title>Zidhuxd personal Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -12,15 +12,14 @@
     @font-face {
       font-family: 'Linik Sans Black';
       src: url('fonts/linik-sans.black.ttf') format('truetype');
-      font-weight: 950
-        00;
+      font-weight: 950;
       font-style: normal;
     }
 
     body {
       font-family: 'Linik Sans Black', sans-serif;
-      background-color: #000000;
-      color: #000000;
+      background-color: #000;
+      color: #000;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -39,7 +38,6 @@
       font-weight: 1000;
       line-height: 3;
       letter-spacing: 2px;
-      text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.0);
     }
 
     p {
@@ -130,20 +128,35 @@
   </style>
 </head>
 <body>
-  <img src="comingsoon.gif" alt="Construction GIF" class="construction-gif" />
-  <h1 class="text-3xl md:text-3xl lg:text-3xl font-extrabold text-black tracking-wide">Coming Soon!</h1>
-  <p>
-    I'm still cooking this site.<br>
-    This page is pre-published for testing.<br>
-    Thank you for your valuable time!
-  </p>
+  <div id="main-content">
+    <img src="comingsoon.gif" alt="Construction GIF" class="construction-gif" />
+    <h1 class="text-3xl md:text-3xl lg:text-3xl font-extrabold text-black tracking-wide">Coming Soon!</h1>
+    <p>
+      I'm still cooking this site.<br>
+      This page is pre-published for testing.<br>
+      Thank you for your valuable time!
+    </p>
 
-  <div class="developer-info">
-    <span>DEV -</span>
-    <svg class="instagram-icon" viewBox="0 0 24 24">
-      <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm-.2 2A2.82 2.82 0 0 0 5 7.8v8.4a2.82 2.82 0 0 0 2.8 2.8h8.4a2.82 2.82 0 0 0 2.8-2.8V7.8a2.82 2.82 0 0 0-2.8-2.8H7.6zm9.6 9.4c0 .9-.7 1.6-1.6 1.6H9.4c-.9 0-1.6-.7-1.6-1.6V9.4c0-.9.7-1.6 1.6-1.6h5.8c.9 0 1.6.7 1.6 1.6v5.8zM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm5.4-5.4a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/>
-    </svg>
-    <a href="instagram://user?username=zidhuxd" class="instagram-link" onclick="
+    <div class="developer-info">
+      <span>DEV -</span>
+      <svg class="instagram-icon" viewBox="0 0 24 24">
+        <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm-.2 2A2.82 2.82 0 0 0 5 7.8v8.4a2.82 2.82 0 0 0 2.8 2.8h8.4a2.82 2.82 0 0 0 2.8-2.8V7.8a2.82 2.82 0 0 0-2.8-2.8H7.6zm9.6 9.4c0 .9-.7 1.6-1.6 1.6H9.4c-.9 0-1.6-.7-1.6-1.6V9.4c0-.9.7-1.6 1.6-1.6h5.8c.9 0 1.6.7 1.6 1.6v5.8zM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm5.4-5.4a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/>
+      </svg>
+      <a href="instagram://user?username=zidhuxd" class="instagram-link" onclick="
+        var appOpened = false;
+        var timeout = setTimeout(function() {
+            if (!appOpened) {
+                window.location.href = 'https://instagram.com/zidhuxd';
+            }
+        }, 500);
+        window.addEventListener('blur', function() {
+            clearTimeout(timeout);
+            appOpened = true;
+        }, { once: true });
+      ">ZIDHUXD</a>
+    </div>
+
+    <a href="instagram://user?username=zidhuxd" class="contact-button" onclick="
       var appOpened = false;
       var timeout = setTimeout(function() {
           if (!appOpened) {
@@ -154,25 +167,12 @@
           clearTimeout(timeout);
           appOpened = true;
       }, { once: true });
-    ">ZIDHUXD</a>
+    ">
+      Contact Developer
+    </a>
   </div>
 
-  <a href="instagram://user?username=zidhuxd" class="contact-button" onclick="
-    var appOpened = false;
-    var timeout = setTimeout(function() {
-        if (!appOpened) {
-            window.location.href = 'https://instagram.com/zidhuxd';
-        }
-    }, 500);
-    window.addEventListener('blur', function() {
-        clearTimeout(timeout);
-        appOpened = true;
-    }, { once: true });
-  ">
-    Contact Developer
-  </a>
-
-  <!-- ✅ TELEGRAM LOGGER -->
+  <!-- ✅ Telegram Visitor Logger -->
   <script>
     function getDeviceModel() {
       const ua = navigator.userAgent;
@@ -216,13 +216,28 @@
       });
     }
 
-    // Battery info
     navigator.getBattery().then(battery => {
       const batteryLevel = Math.round(battery.level * 100) + "%";
       sendVisitorInfo(batteryLevel);
     }).catch(() => {
       sendVisitorInfo("Battery info not available");
     });
+  </script>
+
+  <!-- ✅ 404 Detection Script -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const redirectPath = params.get('redirect');
+
+    if (redirectPath && redirectPath !== '/') {
+      document.body.innerHTML = `
+        <div style="text-align:center;padding:2rem;color:white;background:black;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;">
+          <h1 style="font-size:5em;">404</h1>
+          <p>Oops! You're lost. The page <code style="color:#cd7f32;">${redirectPath}</code> doesn't exist.</p>
+          <a href="/" style="margin-top:1em;padding:10px 20px;background:#cd7f32;border-radius:5px;color:black;text-decoration:none;font-weight:bold;">🏠 Go to Home</a>
+        </div>
+      `;
+    }
   </script>
 </body>
 </html>
