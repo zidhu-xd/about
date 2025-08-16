@@ -1,47 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Page Not Found</title>
-  <style>
-    body {
-      background: #111;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
-    }
-    h1 {
-      font-size: 5em;
-      margin-bottom: 0.2em;
-    }
-    p {
-      font-size: 1.5em;
-      margin-bottom: 1em;
-    }
-    a {
-      background: #cd7f32;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-      transition: all 0.3s;
-    }
-    a:hover {
-      background: #fff;
-      color: #111;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xD - Page Not Found</title>
+    
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Font 'Inter' for a clean, modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS for animations and overrides -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom button styling from Uiverse to match portfolio */
+        .button {
+            line-height: 1;
+            text-decoration: none;
+            display: inline-flex;
+            border: none;
+            cursor: pointer;
+            align-items: center;
+            gap: 0.75rem;
+            background-color: var(--clr);
+            color: black;
+            border-radius: 10rem;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            padding-left: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button__icon-wrapper {
+            flex-shrink: 0;
+            width: 25px;
+            height: 25px;
+            position: relative;
+            color: var(--clr);
+            background-color: #fff;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+        }
+
+        .button:hover {
+            background-color: #000;
+            color: white;
+        }
+
+        .button:hover .button__icon-svg {
+            transform: translateX(5px);
+            fill: white;
+        }
+        
+        .button__icon-svg--copy {
+            position: absolute;
+            transform: translate(-150%, 150%);
+        }
+
+        .button:hover .button__icon-svg:first-child {
+            transition: transform 0.3s ease-in-out;
+            transform: translate(150%, -150%);
+        }
+
+        .button:hover .button__icon-svg--copy {
+            transition: transform 0.3s ease-in-out 0.1s;
+            transform: translate(0);
+        }
+    </style>
 </head>
-<body>
-  <h1>404</h1>
-  <p>Oops! You're lost. This page doesn't exist.</p>
-  <a href="/">🏠 Go to Home</a>
+<body class="bg-black text-white p-4 md:p-12 lg:p-24 min-h-screen antialiased flex flex-col items-center justify-center text-center">
+
+    <!-- The 404 message section -->
+    <section class="space-y-4 md:space-y-6">
+        <h1 class="text-7xl sm:text-8xl md:text-9xl font-black tracking-tighter text-gray-300">
+            404
+        </h1>
+        <p class="text-lg md:text-xl font-medium leading-relaxed max-w-2xl">
+            Oops! It seems you've wandered off the path. The page you're looking for doesn't exist.
+        </p>
+
+        <!-- "Return to Home" button styled to match the portfolio -->
+        <div class="pt-8">
+            <a href="/" class="button" style="--clr: #B7F538">
+                <span class="button__icon-wrapper">
+                    <!-- Home icon SVG -->
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__icon-svg" width="16">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2L2 12H5V22H19V12H22L12 2ZM7 20V11.5L12 6.5L17 11.5V20H7Z" fill="currentColor"></path>
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__icon-svg button__icon-svg--copy" width="16">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2L2 12H5V22H19V12H22L12 2ZM7 20V11.5L12 6.5L17 11.5V20H7Z" fill="currentColor"></path>
+                    </svg>
+                </span>
+                Return to Home
+            </a>
+        </div>
+    </section>
+
 </body>
 </html>
